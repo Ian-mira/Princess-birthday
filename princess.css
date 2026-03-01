@@ -1,0 +1,142 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fff0f7;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* HERO SECTION */
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #ffd6e8, #fff0f7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  color: #ff4081;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.hero button {
+  padding: 12px 25px;
+  font-size: 1rem;
+  background: #ff4081;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero button:active {
+  transform: scale(0.95);
+}
+
+/* PHOTO SECTIONS */
+.photo-section {
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 90%;
+  text-align: center;
+}
+
+.overlay h2 {
+  color: white;
+  font-size: 1.3rem;
+}
+
+/* LETTER SECTION */
+.letter {
+  padding: 60px 20px;
+  text-align: center;
+  background: #ffe4ef;
+}
+
+.letter h2 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: #ff4081;
+}
+
+.letter p {
+  font-size: 1rem;
+  line-height: 1.8;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* FLYING HEARTS */
+.hearts-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.heart {
+  position: absolute;
+  bottom: -60px;
+  animation: floatUp linear forwards;
+  opacity: 0.9;
+  will-change: transform;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-110vh) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* TABLET */
+@media (min-width: 768px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .overlay h2 {
+    font-size: 2rem;
+  }
+
+  .letter p {
+    font-size: 1.2rem;
+  }
+}
